@@ -26,7 +26,5 @@ const JumbotronContainer = () => (
   </Jumbotron.Container>
 );
 
-export {
-  // eslint-disable-next-line import/prefer-default-export
-  JumbotronContainer,
-};
+// eslint-disable-next-line import/prefer-default-export
+export { JumbotronContainer };

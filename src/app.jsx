@@ -1,14 +1,16 @@
 import React from 'react';
 
 import {
-  JumbotronContainer,
-  FooterContainer,
+  JumbotronContainer as Jumbotron,
+  FooterContainer as Footer,
+  FaqsContainer as Faqs,
 } from './containers';
 
 const App = () => (
   <>
-    <JumbotronContainer />
-    <FooterContainer />
+    <Jumbotron />
+    <Faqs />
+    <Footer />
   </>
 );
 
