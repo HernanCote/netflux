@@ -14,22 +14,24 @@ const Inner = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 3.25rem;
-  line-height: 1.1.rem;
+  font-size: 2.5rem;
+  line-height: 1.1rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #fff;
   text-align: center;
 
   @media (max-width: 600px) {
-    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 `;
 
 const Item = styled.div`
   color: #fff;
+  margin: auto;
   margin-bottom: 0.75rem;
-  max-width: 42rem;
+  max-width: 41.75rem;
+  width: 100%;
 
   &:first-of-type {
     margin-top: 3rem;

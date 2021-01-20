@@ -1,17 +1,20 @@
 import React from 'react';
-
 import {
-  JumbotronContainer as Jumbotron,
-  FooterContainer as Footer,
-  FaqsContainer as Faqs,
-} from './containers';
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+
+import * as ROUTES from './constants/routes';
+
+import Home from './pages/Home';
 
 const App = () => (
-  <>
-    <Jumbotron />
-    <Faqs />
-    <Footer />
-  </>
+  <Router>
+    <Switch>
+      <Route exact path={ROUTES.HOME} component={Home} />
+    </Switch>
+  </Router>
 );
 
 export default App;
