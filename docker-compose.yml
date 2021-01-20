@@ -3,7 +3,10 @@ version: '3.7'
 services:
   app:
     image: netflux:dev
-    build: ./
+    container_name: netflux
+    build:
+      context: .
+      dockerfile: Dockerfile
     expose:
       - 3000
     ports:
