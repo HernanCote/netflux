@@ -1,12 +1,19 @@
 import React from 'react';
-import { Header } from '../components/Accordion';
+import Header from '../components/Header';
 
-const HeaderContainer = () => (
+import logo from '../logo.svg';
+
+import * as ROUTES from '../constants/routes';
+
+const HeaderContainer = ({
+  children,
+}) => (
   <Header>
     <Header.Frame>
-      <Header.Logo />
-      <Header.Button />
+      <Header.Logo to={ROUTES.HOME} alt="Netflux" src={logo} />
+      <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
     </Header.Frame>
+    {children}
   </Header>
 );
 

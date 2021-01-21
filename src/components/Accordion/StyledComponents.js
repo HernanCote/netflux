@@ -29,8 +29,8 @@ const Title = styled.h1`
 const Item = styled.div`
   color: #fff;
   margin: auto;
-  margin-bottom: 0.75rem;
-  max-width: 41.75rem;
+  margin-bottom: 0.05rem;
+  max-width: 42.25rem;
   width: 100%;
 
   &:first-of-type {
