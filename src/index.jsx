@@ -6,6 +6,8 @@ import 'normalize.css';
 
 import App from './app';
 
+import { firebase } from './lib/firebase.prod';
+
 import reportWebVitals from './reportWebVitals';
 
 render(
