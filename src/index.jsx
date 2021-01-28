@@ -9,12 +9,13 @@ import App from './app';
 import { firebase } from './lib/firebase.prod';
 
 import reportWebVitals from './reportWebVitals';
+import { FirebaseContext } from './context/firebase';
 
 render(
-  <>
+  <FirebaseContext.Provider value={{ firebase }}>
     <GlobalStyles />
     <App />
-  </>,
+  </FirebaseContext.Provider>,
   document.getElementById('root'),
 );
 
