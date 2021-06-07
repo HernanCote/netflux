@@ -26,7 +26,7 @@
     "nodemon": "^2.0.6"
   },
   "scripts": {
-    "build:image": "docker build -t netflux:dev",
+    "build:image": "docker build -t netflux:dev .",
     "prod": "docker-compose -f docker-compose.prod.yml up -d --build",
     "dev": "docker-compose up --build",
     "start": "react-scripts start",

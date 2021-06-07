@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import { FirebaseContext } from '../../context';
 import Form from '../../components/Form';
+
+import * as ROUTES from '../../constants/routes';
 
 import {
   HeaderContainer as Header,
@@ -7,15 +12,28 @@ import {
 } from '../../containers';
 
 const SignIn = () => {
+  const history = useHistory();
+  const { firebase } = useContext(FirebaseContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const submitHandler = e => {
-    e.preventDefault();
-  };
-
   const isInvalid = password === '' || email === '';
+
+  const submitHandler = async e => {
+    e.preventDefault();
+    try {
+      await firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password);
+
+      history.push(ROUTES.BROWSE);
+    } catch (err) {
+      setEmail('');
+      setPassword('');
+      setError(err.message);
+    }
+  };
 
   return (
     <>
