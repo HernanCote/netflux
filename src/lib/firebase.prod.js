@@ -2,8 +2,6 @@ import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-import { seedDatabase } from '../seed';
-
 const config = {
   apiKey: process.env.REACT_APP_apiKey,
   authDomain: process.env.REACT_APP_authDomain,
@@ -14,8 +12,6 @@ const config = {
 };
 
 const firebase = Firebase.initializeApp(config);
-
-seedDatabase(firebase);
 
 export {
   firebase,
