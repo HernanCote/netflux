@@ -20,7 +20,7 @@ import * as ROUTES from './constants/routes';
 
 const App = () => {
   const { user } = useAuthListener();
-  console.log(user);
+
   return (
     <Router>
       <Switch>

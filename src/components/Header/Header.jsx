@@ -13,7 +13,9 @@ const Header = ({
   background = true,
   ...rest
 }) => (
-  background ? <Background {...rest}>{children}</Background> : { children }
+  background
+    ? <Background {...rest}>{children}</Background>
+    : (<>{ children }</>)
 );
 
 Header.Frame = function HeaderFrame({ children, ...rest }) {
