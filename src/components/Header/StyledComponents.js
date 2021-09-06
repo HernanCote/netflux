@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 import { Link as ReactRouterLink } from 'react-router-dom';
 
@@ -8,6 +8,11 @@ const Background = styled.div`
   background: 
     url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover no-repeat;
   
+  @media (max-width: 1100px) {
+    ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && css`
+      background: none;
+    `}
+  }
 `;
 
 const Container = styled.div`
@@ -57,9 +62,169 @@ const ButtonLink = styled(ReactRouterLink)`
   }
 `;
 
+const Feature = styled(Container)`
+  padding: 9.5rem 0 31.25rem 0;
+  flex-direction: column;
+  align-items: normal;
+  width: 50%;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
+
+const Text = styled.p`
+  color: white;
+  font-size: 1.375rem;
+  line-height: normal;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.45);
+  margin: 0;
+`;
+
+const FeatureCallOut = styled.h2`
+  color: white;
+  font-size: 3.25rem;
+  font-weight: bold;
+  line-height: normal;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.45);
+  margin: 0;
+  margin-bottom: 1.2rem;
+`;
+
+const TextLink = styled.p`
+  color: #FFF;
+  text-decoration: none;
+  font-weight: ${({ active }) => (active ? '700' : 'normal')};
+  cursor: pointer;
+  margin-right: 2rem;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
+
+const Picture = styled.button`
+  background: url(${({ src }) => src});
+  background-size: contain;
+  border: 0;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+`;
+
+const Group = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Dropdown = styled.div`
+  display: none;
+  background-color: #000;
+  position: absolute;
+  padding: 0.75rem;
+  width: 6.25rem;
+  top: 2rem;
+  right: 0.5rem;
+
+  ${Group}:last-of-type ${TextLink} {
+    cursor: pointer;
+  }
+
+  ${Group} {
+    margin-bottom: 0.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    ${TextLink}, ${Picture} {
+      cursor: default;
+    }
+  }
+
+  button {
+    margin-right: 0.5rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+`;
+
+const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 2.25rem;
+  position: relative;
+  
+  button {
+    cursor: pointer;
+  }
+
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const Search = styled.div`
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: #FFF;
+    cursor: pointer;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
+const SearchIcon = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 1rem;
+  }
+`;
+
+const SearchInput = styled.input`
+  background-color: #44444459;
+  color: #FFF;
+  border: 1px solid #FFF;
+  transition: width 0.5s;
+  height: 1.75rem;
+  font-size: 0.75rem;
+  margin-left: ${({ active }) => (active ? '0.55rem' : '0')};
+  padding: ${({ active }) => (active ? '0 0.55rem' : '0')};
+  opacity: ${({ active }) => (active ? '1' : '0')};
+  width: ${({ active }) => (active ? '12.5rem' : '0')};
+`;
+
 export {
   Background,
   Container,
   Logo,
   ButtonLink,
+  Feature,
+  Text,
+  FeatureCallOut,
+  TextLink,
+  Group,
+  Picture,
+  Profile,
+  Dropdown,
+  Search,
+  SearchIcon,
+  SearchInput,
 };

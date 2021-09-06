@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`  
+const GlobalStyles = createGlobalStyle`
+  * {
+    outline: none;
+  }  
   html, body {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif, Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
