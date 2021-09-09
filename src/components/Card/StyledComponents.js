@@ -26,11 +26,10 @@ const Container = styled.div`
 
 const Group = styled.div`
   display: flex;
-
   flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
-  ${({ alignItems }) => alignItems && `align-items: ${alignItems}`}
-  ${({ margin }) => margin && `margin: ${margin}`}
-  
+  align-items: ${({ alignItems }) => alignItems && alignItems};
+  margin: ${({ margin }) => margin && margin};
+
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
       margin-top: -9.25rem;
@@ -72,16 +71,17 @@ const Feature = styled.div`
   display: flex;
   flex-direction: row;
   background: url(${({ src }) => src});
-  background-size: contain;
+  background-size: cover;
   position: relative;
-  height: 360px;
+  height: 15.5rem;
   background-position-x: right;
   background-repeat: no-repeat;
   background-color: #000;
 
   @media (min-width: 1000px) {
+    height: 22.5rem;
     height: auto;
-    background-size: auto;
+    background-size: contain;
     
     ${Title} {
       font-size: 1.2rem;
@@ -118,6 +118,7 @@ const Maturity = styled.div`
   background-color: ${({ rating }) => (rating >= 15 ? '#9F0000' : '#007A00')};
   border-radius: 1rem;
   width: 1.25rem;
+  height: 1.25rem;
   padding: 0.25rem;
   text-align: center;
   color: #FFF;
@@ -125,6 +126,7 @@ const Maturity = styled.div`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-right: 0.5rem;
   font-size: 12px;
+  line-height: 1.7;
 `;
 
 const Content = styled.div`
