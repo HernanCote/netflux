@@ -39,6 +39,8 @@ const availableGenres = [
 
 const mapContent = media => availableGenres.reduce((result, genre) => {
   const data = media?.filter(item => item.genre === genre.filter);
+
+  if (!data) return [];
   if (data.length > 0) {
     result.push({
       title: genre.title,

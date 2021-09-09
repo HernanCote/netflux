@@ -17,7 +17,6 @@ const Background = styled.div`
 
 const Container = styled.div`
   display: flex;
-  margin: 0 3.5rem;
   height: 4rem;
   padding: 1.25rem;
   justify-content: space-between;
@@ -25,10 +24,6 @@ const Container = styled.div`
   
   a {
     display: flex;
-  } 
-
-  @media (max-width: 1000px) {
-    margin: 0 2rem;
   }
 `;
 
@@ -63,7 +58,7 @@ const ButtonLink = styled(ReactRouterLink)`
 `;
 
 const Feature = styled(Container)`
-  padding: 9.5rem 0 31.25rem 0;
+  padding: 9.5rem 0 31.25rem 4rem;
   flex-direction: column;
   align-items: normal;
   width: 50%;
@@ -160,7 +155,7 @@ const Dropdown = styled.div`
 const Profile = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 2.25rem;
+  margin-left: 1rem;
   position: relative;
   
   button {
@@ -211,6 +206,26 @@ const SearchInput = styled.input`
   width: ${({ active }) => (active ? '12.5rem' : '0')};
 `;
 
+const PlayButton = styled.button`
+  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+  background-color: #e6e6e6;
+  color: #000;
+  font-weight: bold;
+  border-width: 0;
+  padding: 0.65rem 1.1rem;
+  border-radius: 5px;
+  max-width: 8rem;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background-color: #FF1E1E;
+    color: #FFF;
+  }
+`;
+
 export {
   Background,
   Container,
@@ -227,4 +242,5 @@ export {
   Search,
   SearchIcon,
   SearchInput,
+  PlayButton,
 };
