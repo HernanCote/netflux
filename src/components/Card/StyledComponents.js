@@ -61,6 +61,7 @@ const FeatureText = styled.p`
   font-size: 1rem;
   color: #FFF;
   font-weight: ${({ fontWeight }) => (fontWeight === 'bold' ? 'bold' : 'normal')};
+  font-weight: bold;
   
   @media (max-width: 600px) {
     line-height: 22px;
@@ -122,11 +123,11 @@ const Maturity = styled.div`
   padding: 0.25rem;
   text-align: center;
   color: #FFF;
-  font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-right: 0.5rem;
   font-size: 12px;
   line-height: 1.7;
+  font-weight: bold;
 `;
 
 const Content = styled.div`

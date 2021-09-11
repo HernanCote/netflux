@@ -90,7 +90,7 @@ Card.Feature = function CardFeature({ children, category, ...rest }) {
         </FeatureClose>
 
         <Group
-          margin="1.75rem 0"
+          margin="1rem 0"
           alignItems="center"
           flexDirection="row"
         >

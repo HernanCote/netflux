@@ -10,6 +10,7 @@ import Card from '../components/Card';
 
 import * as ROUTES from '../constants/routes';
 import logo from '../netflux.svg';
+import { FooterContainer } from './FooterContainer';
 
 const BrowseContainer = ({
   slides,
@@ -55,7 +56,9 @@ const BrowseContainer = ({
                 Films
               </Header.TextLink>
             </Header.Group>
-            <Header.Group>
+            <Header.Group
+              marginRight="2.5rem"
+            >
               <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
               <Header.Profile>
                 <Header.Picture src={user.photoURL} />
@@ -106,6 +109,7 @@ const BrowseContainer = ({
           ))}
         </Card.Group>
       </>
+      <FooterContainer />
     </>
   ) : <SelectProfilesContainer user={user} setProfile={setProfile} />;
 };

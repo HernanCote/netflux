@@ -14,6 +14,13 @@ services:
     volumes:
       - ./src/:/app/src/
       - ./public/:/app/public/
+    environment: 
+      - REACT_APP_apiKey=${REACT_APP_apiKey}
+      - REACT_APP_authDomain=${REACT_APP_authDomain}
+      - REACT_APP_projectId=${REACT_APP_projectId}
+      - REACT_APP_storageBucket=${REACT_APP_storageBucket}
+      - REACT_APP_messagingSenderId=${REACT_APP_messagingSenderId}
+      - REACT_APP_appId=${REACT_APP_appId}
     command: npm start
     environment:
       - CHOKIDAR_USEPOLLING=true  

@@ -112,8 +112,13 @@ const Picture = styled.button`
 `;
 
 const Group = styled.div`
+  margin-right: ${({ marginRight }) => (marginRight || 0)};
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1100px) {
+    margin-right: 0.75rem;
+  }
 `;
 
 const Dropdown = styled.div`
