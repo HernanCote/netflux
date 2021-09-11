@@ -7,6 +7,7 @@ import { FirebaseContext } from '../context';
 import Loading from '../components/Loading';
 import Header from '../components/Header';
 import Card from '../components/Card';
+import Player from '../components/Player';
 
 import * as ROUTES from '../constants/routes';
 import logo from '../netflux.svg';
@@ -104,7 +105,12 @@ const BrowseContainer = ({
                   </Card.Item>
                 ))}
               </Card.Entities>
-              <Card.Feature category={category} />
+              <Card.Feature category={category}>
+                <Player>
+                  <Player.Button />
+                  <Player.Video src="/videos/bunny.mp4" />
+                </Player>
+              </Card.Feature>
             </Card>
           ))}
         </Card.Group>
