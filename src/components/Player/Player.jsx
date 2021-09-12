@@ -26,7 +26,11 @@ Player.Video = function PlayerVideo({ src, ...rest }) {
 
   return showPlayer
     ? ReactDOM.createPortal(
-      <Overlay {...rest} onClick={() => setShowPlayer(false)} data-testid="player">
+      <Overlay
+        {...rest}
+        onClick={() => setShowPlayer(false)}
+        data-testid="player"
+      >
         <Inner>
           <video id="netflux-player" controls>
             <source src={src} type="video/mp4" />
