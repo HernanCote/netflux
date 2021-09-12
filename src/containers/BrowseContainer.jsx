@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import Fuse from 'fuse.js';
 
 import { SelectProfilesContainer } from './ProfilesContainer';
 
@@ -35,6 +36,21 @@ const BrowseContainer = ({
   useEffect(() => {
     setSlideRows(slides[category]);
   }, [slides, category]);
+
+  useEffect(() => {
+    if (searchTerm.length < 3) {
+      setSlideRows(slides[category]);
+      return;
+    }
+    const fuse = new Fuse(slideRows, { keys: ['data.description', 'data.title', 'data.genre'] });
+    const results = fuse.search(searchTerm).map(({ item }) => item);
+
+    if (slideRows.length > 0 && results.length > 0) {
+      setSlideRows(results);
+    } else {
+      setSlideRows(slides[category]);
+    }
+  }, [searchTerm]);
 
   return profile.displayName ? (
     <>
