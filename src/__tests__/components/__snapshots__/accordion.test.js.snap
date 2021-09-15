@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> opens and closes the <Accordion /> component 1`] = `
+<div
+  class="StyledComponents__Container-sc-1gbwx9c-0 gQhybf"
+>
+  <div
+    class="StyledComponents__Inner-sc-1gbwx9c-1 ihmThD"
+  >
+    <h1
+      class="StyledComponents__Title-sc-1gbwx9c-2 daipkN"
+    >
+      Frequently Asked Questions
+    </h1>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        What is Netflux?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        How much does Netflux cost?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        Where can I watch?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        How do I cancel?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        What can I watch on Netflux?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> renders <Accordion /> with populated data 1`] = `
+<div
+  class="StyledComponents__Container-sc-1gbwx9c-0 gQhybf"
+>
+  <div
+    class="StyledComponents__Inner-sc-1gbwx9c-1 ihmThD"
+  >
+    <h1
+      class="StyledComponents__Title-sc-1gbwx9c-2 daipkN"
+    >
+      Frequently Asked Questions
+    </h1>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        What is Netflux?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        How much does Netflux cost?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        Where can I watch?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        How do I cancel?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+    <div
+      class="StyledComponents__Item-sc-1gbwx9c-3 cJgWIs"
+    >
+      <div
+        class="StyledComponents__Header-sc-1gbwx9c-4 cNHElk"
+      >
+        What can I watch on Netflux?
+        <img
+          alt="open"
+          src="images/icons/add.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
